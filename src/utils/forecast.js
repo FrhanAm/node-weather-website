@@ -9,7 +9,7 @@ const forecast = (longitude, latitude, callback) => {
         } else if(body.error) {
             callback("Unable to find location!", undefined);
         } else {
-            callback(undefined, body.daily.data[0].summary + " It is currently " + body.currently.temperature + " degrees out. There is " + body.currently.precipProbability + " chance of rain. and the lowest temperature is " + body.daily.data[0].temperatureLow + " with a highest temperature of " + body.daily.data[0].temperatureHigh);
+            callback(undefined, body.daily.data[0].summary + " It is currently " + body.currently.temperature + " degrees out. and the low is " + body.daily.data[0].temperatureLow + " with a high of " + body.daily.data[0].temperatureHigh + ". and There is " + body.currently.precipProbability + " chance of rain.");
         }
     });
 }
